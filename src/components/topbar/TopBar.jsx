@@ -8,7 +8,7 @@ export default function Topbar() {
       <div className="topbarTop">
         <span className="topbarTitle">Gardens in Colors</span>
       </div>
-      <div className="topbarbottom">
+      <div className="topbarBottom">
         <div className="topLeft">
           <i className="topIcon fab fa-facebook-square"></i>
           <i className="topIcon fab fa-instagram-square"></i>
