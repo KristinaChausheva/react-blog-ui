@@ -54,6 +54,7 @@
   height: 100vh;
   font-family: inherit;
   font-size: 20px;
+  background-color: rgb(224, 216, 216);
 }
 
 .writeSubmit {
