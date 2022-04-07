@@ -5,6 +5,7 @@ import Register from "./pages/register/Register"
 import Settings from "./pages/settings/Settings"
 import Single from "./pages/single/Single"
 import Write from "./pages/write/Write"
+import Footer from "./components/footer/Footer"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           ></Route>
         </Route>
       </Routes>
+      <Footer />
     </Router>
   )
 }
