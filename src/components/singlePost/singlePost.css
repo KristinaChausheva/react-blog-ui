@@ -1,5 +1,6 @@
 .singlePost {
   flex: 9;
+  font-family: "Nunito", sans-serif;
 }
 
 .singlePostWrapper {
@@ -16,7 +17,7 @@
 
 .singlePostTitle {
   text-align: center;
-  margin: 10px;
+  margin: 2em;
   font-size: 28px;
   font-family: "Lora", sans-serif;
 }
@@ -39,7 +40,8 @@
 }
 
 .singlePostInfo {
-  margin-bottom: 20px;
+  margin-bottom: 2em;
+  padding: 0 4em;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
@@ -48,13 +50,14 @@
 }
 
 .singlePostAuthor {
-  margin-left: 5px;
+  margin-left: 0.5em;
 }
 
 .singlePostDesc {
   color: #666;
   font-size: 18px;
   line-height: 25px;
+  padding: 3em;
 }
 
 .singlePostDesc::first-letter {

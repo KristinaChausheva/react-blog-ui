@@ -6,7 +6,7 @@ export default function Topbar() {
   return (
     <div className="top">
       <div className="topbarTop">
-        <span className="topbarTitle">Gardens in Colors</span>
+        <span className="topbarTitle">Our Garden in Colors</span>
       </div>
       <div className="topbarBottom">
         <div className="topLeft">
