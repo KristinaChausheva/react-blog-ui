@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom"
 import "./topbar.css"
 
+import { AuthContext } from "../../context/AuthContext"
+import { useContext } from "react"
+
 export default function Topbar() {
-  const user = true
+  // const user = true
+  const { currentUser } = useContext(AuthContext)
+
   return (
     <div className="top">
       <div className="topbarTop">
@@ -29,12 +34,12 @@ export default function Topbar() {
                 WRITE
               </Link>
             </li>
-            {user && <li className="topListItem">LOGOUT</li>}
+            {currentUser && <li className="topListItem">LOGOUT</li>}
           </ul>
         </div>
         <div className="topRight">
           <i className="topSearchIcon fas fa-search"></i>
-          {user ? (
+          {currentUser ? (
             <Link className="link" to="/settings">
               <img
                 className="topImg"
