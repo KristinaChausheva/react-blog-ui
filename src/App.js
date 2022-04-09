@@ -9,7 +9,7 @@ import Footer from "./components/footer/Footer"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
-  const currentUser = false
+  const currentUser = true
   return (
     <Router>
       <Topbar />
