@@ -8,8 +8,17 @@ import Write from "./pages/write/Write"
 import Footer from "./components/footer/Footer"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
+import { AuthContext } from "./context/AuthContext"
+import { useContext } from "react"
+
 function App() {
-  const currentUser = true
+  // const currentUser = true
+  const { currentUser } = useContext(AuthContext)
+
+  // const RequireAuth = ({ children }) => {
+  //   return currentUser ? children : <Navigate to="/login" />
+  // }
+
   return (
     <Router>
       <Topbar />
