@@ -1,15 +1,18 @@
 .post {
-  width: 385px;
+  width: 25em;
   margin: 0px 25px 40px 25px;
   display: flex;
   flex-direction: column;
+  border: solid 2px black;
+  border-radius: 0.3em;
 }
 
 .postImg {
-  width: 385px;
+  width: 25em;
   height: 280px;
   object-fit: cover;
-  border-radius: 7px;
+  border-radius: 0.3em;
+  padding-right: 0.2em;
 }
 
 .postInfo {
@@ -58,4 +61,5 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  padding: 0 1em 3em 1em;
 }
