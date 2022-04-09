@@ -14,7 +14,7 @@ import { useContext } from "react"
 function App() {
   // const currentUser = true
   const { currentUser } = useContext(AuthContext)
-
+  console.log(currentUser)
   // const RequireAuth = ({ children }) => {
   //   return currentUser ? children : <Navigate to="/login" />
   // }
