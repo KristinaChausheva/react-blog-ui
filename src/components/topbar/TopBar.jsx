@@ -1,12 +1,36 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./topbar.css"
 
 import { AuthContext } from "../../context/AuthContext"
 import { useContext } from "react"
 
+import { auth } from "../../firebase"
+import { signOut } from "firebase/auth"
+
+// import { useEffect, useState, useRef } from "react"
+
 export default function Topbar() {
   // const user = true
   const { currentUser } = useContext(AuthContext)
+  const { dispatch } = useContext(AuthContext)
+  // console.log(useContext(AuthContext))
+  // console.log(dispatch)
+  // console.log(currentUser)
+  const navigate = useNavigate()
+
+  async function handleLogout() {
+    signOut(auth)
+      .then((userCredential) => {
+        // const user = userCredential.user
+
+        dispatch({ type: "LOGOUT" })
+        navigate("/")
+        console.log("clicked")
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   return (
     <div className="top">
@@ -34,7 +58,11 @@ export default function Topbar() {
                 WRITE
               </Link>
             </li>
-            {currentUser && <li className="topListItem">LOGOUT</li>}
+            {currentUser && (
+              <li className="topListItem" onClick={handleLogout}>
+                LOGOUT
+              </li>
+            )}
           </ul>
         </div>
         <div className="topRight">
