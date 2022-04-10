@@ -37,6 +37,7 @@ export default function Posts() {
       {data.map((blog) => (
         <Post
           key={blog.id}
+          id={blog.id}
           img={blog.imgUrl}
           author={blog.author}
           title={blog.title}

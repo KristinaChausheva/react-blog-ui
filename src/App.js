@@ -14,10 +14,6 @@ import { useContext } from "react"
 function App() {
   // const currentUser = true
   const { currentUser } = useContext(AuthContext)
-  console.log(currentUser)
-  // const RequireAuth = ({ children }) => {
-  //   return currentUser ? children : <Navigate to="/login" />
-  // }
 
   return (
     <Router>
@@ -34,7 +30,7 @@ function App() {
             path="login"
             element={currentUser ? <Homepage /> : <Login />}
           />
-          <Route path="post/:id" element={<Single />} />
+          <Route path="post/:postId" element={<Single />} />
           <Route
             path="write"
             element={currentUser ? <Write /> : <Login />}
