@@ -18,6 +18,12 @@ export default function Write() {
           <input id="fileInput" type="file" style={{ display: "none" }} />
           <input
             className="writeInput"
+            placeholder="Add an Author"
+            type="text"
+            autoFocus={true}
+          />
+          <input
+            className="writeInput"
             placeholder="Add a Title"
             type="text"
             autoFocus={true}
